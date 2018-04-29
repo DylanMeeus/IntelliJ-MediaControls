@@ -2,7 +2,7 @@
 .idea/
 build/
 out/
-.iml
-.ipr
-.iws
+*.iml
+*.ipr
+*.iws
 .class
