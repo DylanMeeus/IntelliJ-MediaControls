@@ -1,0 +1,30 @@
+<idea-plugin>
+    <id>itca.mediakeys-plugin</id>
+    <name>Media keys plugin</name>
+    <vendor email="meeusdylan@protonmail.com" url="https://www.github.com/DylanMeeus">Dylan Meeus</vendor>
+
+    <description><![CDATA[
+        Media controls from within IntelliJ for Linux.
+        Requires xdotools to be installed. (Sudo apt-get install xdotools on debian based systems).
+
+    ]]></description>
+
+    <!--
+    <depends>com.intellij.modules.lang</depends>
+       -->
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="itca.mediakeys-plguin" text="Media" description="Media keys plugin menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="MediaPlugin.PLAY_PAUSE" class="mediakeys.toolbar.PlayPauseAction" text="Play/Pause" description="Plays or pauses media"/>
+            <action id="MediaPlugin.PREV" class="mediakeys.toolbar.PrevAction" text="Previous" description="Plays the previous media item"/>
+            <action id="MediaPlugin.NEXT" class="mediakeys.toolbar.NextAction" text="Next" description="Plays the next media item"/>
+            <action id="MediaPlugin.MUTE_UNMUTE" class="mediakeys.toolbar.MuteAction" text="Mute/Unmute" description="Mutes or unmutes the audio"/>
+            <action id="MediaPlugin.LOWER" class="mediakeys.toolbar.LowerAction" text="Lower volume" description="Lowers the volume"/>
+            <action id="MediaPlugin.RAISE" class="mediakeys.toolbar.RaiseAction" text="Raise volume" description="Raises the volume"/>
+        </group>
+    </actions>
+</idea-plugin>
