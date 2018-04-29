@@ -1,4 +1,4 @@
-properties.gradle
+gradle.properties
 .gradle/
 .idea/
 build/
